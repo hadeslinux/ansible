@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# = "2" ];then
+ansible $1 -m shell -a $2
+else
+echo "---------------------- Error--- -----------------------------"
+echo -e " Usge: $0 Group[\$1] Command[\$2] ----\$2 is Strings ---- "
+echo "------------------- Exit 1 ----------------------------------"
+fi

@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# = "3" ];then
+ansible $1 -m copy -a "src=$2 dest=$3"
+else
+echo "---------------------- Error--- ---------------"
+echo -e " Usage: $0 Group[\$1]  src[\$2]  dest[\$3]   "
+echo "------------------- Exit 1 --------------------"
+fi
+
